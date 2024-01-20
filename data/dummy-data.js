@@ -2,16 +2,56 @@ import Category from "../models/category";
 import Meal from "../models/meal";
 
 export const CATEGORIES = [
-  new Category("c1", "Italian", "#f5428d"),
-  new Category("c2", "Quick & Easy", "#f54242"),
-  new Category("c3", "Hamburgers", "#f5a442"),
-  new Category("c4", "German", "#f5d142"),
-  new Category("c5", "Light & Lovely", "#368dff"),
-  new Category("c6", "Exotic", "#41d95d"),
-  new Category("c7", "Breakfast", "#9eecff"),
-  new Category("c8", "Asian", "#b9ffb0"),
-  new Category("c9", "French", "#ffc7ff"),
-  new Category("c10", "Summer", "#47fced"),
+  new Category(
+    "c1",
+    "Italian",
+    "https://i.pinimg.com/564x/a4/97/92/a497926f75a435f27307276ae7d31c8e.jpg"
+  ),
+  new Category(
+    "c2",
+    "Quick & Easy",
+    "https://i.pinimg.com/474x/82/c9/fc/82c9fc489f4d5f940d8465b7aa90f169.jpg"
+  ),
+  new Category(
+    "c3",
+    "Hamburgers",
+    "https://i.pinimg.com/564x/c4/70/7a/c4707a8305cf5dc79ce41458fa96854f.jpg"
+  ),
+  new Category(
+    "c4",
+    "German",
+    "https://png.pngtree.com/png-vector/20230912/ourmid/pngtree-germany-national-sausage-food-illustration-png-image_10025760.png"
+  ),
+  new Category(
+    "c5",
+    "Light & Lovely",
+    "https://i.pinimg.com/474x/0b/8e/08/0b8e08f17c43669d1fb2c13323627ed6.jpg"
+  ),
+  new Category(
+    "c6",
+    "Exotic",
+    "https://i.pinimg.com/474x/db/55/22/db5522c357d22d8b455eb5c43318809c.jpg"
+  ),
+  new Category(
+    "c7",
+    "Breakfast",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT-ZvLFAPRoTa6vZzqgvRRJJC0pv1wc6L0qA&usqp=CAU"
+  ),
+  new Category(
+    "c8",
+    "Asian",
+    "https://i.pinimg.com/564x/9b/7c/f9/9b7cf99b31747366a3dd61f8b75e2510.jpg"
+  ),
+  new Category(
+    "c9",
+    "French",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgRoqWvmBNukn8_7jvHZzFU-sMp10M9MradA&usqp=CAU"
+  ),
+  new Category(
+    "c10",
+    "Summer",
+    "https://i.pinimg.com/474x/67/e6/8a/67e68ae7e613c3e11f6a15727a35ee5e.jpg"
+  ),
 ];
 
 export const MEALS = [
