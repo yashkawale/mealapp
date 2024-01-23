@@ -1,5 +1,4 @@
 import { View, StyleSheet } from "react-native";
-// import { LinearGradient } from "expo-linear-gradient";
 import CategoriesScreen from "./screens/CategoriesScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -8,6 +7,7 @@ import MealsCategories from "./screens/MealsCategories";
 import MealsDetailsScreen from "./screens/MealsDetailsScreen";
 import Favorites from "./screens/Favorites";
 import Icon from "./components/Icon";
+import MealsContextProvider from "./store/context/MealsContextProvider";
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -49,41 +49,43 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={HandleBottomTabNavigation}
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="mealsCategories"
-            component={MealsCategories}
-            options={{
-              headerStyle: {
-                backgroundColor: "#E8CBC0",
-              },
-              contentStyle: {
-                backgroundColor: "#E8CBC0",
-              },
-            }}
-          />
-          <Stack.Screen
-            name="mealsDetailsScreen"
-            component={MealsDetailsScreen}
-            options={{
-              headerStyle: {
-                backgroundColor: "#E8CBC0",
-              },
-              contentStyle: {
-                backgroundColor: "#E8CBC0",
-              },
-            }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <MealsContextProvider>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={HandleBottomTabNavigation}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="mealsCategories"
+              component={MealsCategories}
+              options={{
+                headerStyle: {
+                  backgroundColor: "#E8CBC0",
+                },
+                contentStyle: {
+                  backgroundColor: "#E8CBC0",
+                },
+              }}
+            />
+            <Stack.Screen
+              name="mealsDetailsScreen"
+              component={MealsDetailsScreen}
+              options={{
+                headerStyle: {
+                  backgroundColor: "#E8CBC0",
+                },
+                contentStyle: {
+                  backgroundColor: "#E8CBC0",
+                },
+              }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </MealsContextProvider>
     </View>
   );
 }
